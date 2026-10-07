@@ -1,0 +1,132 @@
+/* =========================================================
+   COLORES Y TIPOGRAFÍA · Cambia aquí el aspecto de TODAS las páginas
+   ========================================================= */
+:root {
+  --fondo:      #ece6d8;   /* hueso */
+  --fondo-alt:  #ddd5c3;
+  --oscuro:     #0f1b22;   /* tinta */
+  --oscuro-2:   #16262f;
+  --acento:     #4fa39c;   /* verde azulado de tatuaje clásico */
+  --acento-osc: #2a6f69;
+  --rojo:       #c8402f;
+  --mostaza:    #d9a441;
+  --texto:      #0f1b22;
+  --texto-suave:#55625f;
+
+  --fuente-titulos: 'Bricolage Grotesque', 'Impact', sans-serif;
+  --fuente-texto:   'DM Sans', system-ui, sans-serif;
+  --ancho: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--fuente-texto); background: var(--fondo); color: var(--texto); line-height: 1.65; font-size: 17px; display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; }
+h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 800; line-height: 1.02; letter-spacing: -.025em; }
+h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); margin-bottom: .5rem; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--mostaza); outline-offset: 3px; }
+.wrap { max-width: var(--ancho); margin: 0 auto; padding: 0 1.4rem; }
+section { padding: 4.5rem 0; }
+.alt { background: var(--fondo-alt); }
+.intro { color: var(--texto-suave); max-width: 52ch; margin-bottom: 2.5rem; }
+
+/* Botones con sombra dura, como una hoja de flash */
+.boton { display: inline-block; background: var(--acento); color: var(--oscuro); text-decoration: none; padding: .8rem 1.5rem; border-radius: 4px; font: inherit; font-weight: 700; border: 2px solid var(--oscuro); box-shadow: 4px 4px 0 var(--oscuro); cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.boton:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--oscuro); }
+.boton.claro { background: transparent; color: var(--fondo); border-color: var(--fondo); box-shadow: 4px 4px 0 var(--fondo); }
+
+/* Cabecera y menú */
+header.top { position: sticky; top: 0; z-index: 10; background: var(--oscuro); color: var(--fondo); border-bottom: 3px solid var(--acento); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 66px; flex-wrap: wrap; padding-top: .4rem; padding-bottom: .4rem; }
+.logo { font-family: var(--fuente-titulos); font-weight: 800; font-size: 1.5rem; text-decoration: none; letter-spacing: -.02em; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 1.3rem; flex-wrap: wrap; align-items: center; }
+nav a { text-decoration: none; font-size: .95rem; opacity: .8; padding: .3rem 0; }
+nav a:hover, nav a.activo { opacity: 1; }
+nav a.activo { border-bottom: 3px solid var(--mostaza); }
+nav a.boton { padding: .45rem .95rem; opacity: 1; border-bottom: 2px solid var(--fondo); box-shadow: 3px 3px 0 var(--fondo); border-color: var(--fondo); }
+
+/* Cabecera de páginas interiores */
+.cabecera-pagina { background: var(--oscuro); color: var(--fondo); padding: 3.5rem 0 3rem; border-bottom: 3px solid var(--acento); }
+.cabecera-pagina h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); margin-bottom: .6rem; }
+.cabecera-pagina p { max-width: 50ch; opacity: .8; }
+
+/* Inicio */
+.hero { background: var(--oscuro); color: var(--fondo); padding: 4.5rem 0 5rem; border-bottom: 3px solid var(--acento); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
+.hero h1 { font-size: clamp(3rem, 9vw, 6rem); max-width: 10ch; margin-bottom: 1.2rem; }
+.hero p { font-size: 1.15rem; max-width: 46ch; opacity: .85; margin-bottom: 2rem; }
+.acciones { display: flex; flex-wrap: wrap; gap: 1rem; }
+.insignia { width: min(380px, 100%); margin: auto; }
+.insignia svg { width: 100%; height: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  .insignia svg { animation: balanceo 6s ease-in-out infinite; transform-origin: center; }
+  @keyframes balanceo { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+}
+.banda-reserva { background: var(--oscuro); color: var(--fondo); text-align: center; border-top: 3px solid var(--acento); }
+.banda-reserva p { opacity: .8; margin: .5rem 0 1.6rem; }
+
+/* Servicios */
+.lista-servicios { list-style: none; padding: 0; max-width: 780px; }
+.lista-servicios li { display: grid; grid-template-columns: 1fr auto; gap: .15rem 1rem; padding: 1.1rem 0; border-bottom: 2px solid var(--oscuro); }
+.lista-servicios strong { font-family: var(--fuente-titulos); font-weight: 800; font-size: 1.35rem; letter-spacing: -.01em; }
+.lista-servicios .precio { font-family: var(--fuente-titulos); font-weight: 800; font-size: 1.3rem; color: var(--acento-osc); white-space: nowrap; }
+.lista-servicios small { grid-column: 1; color: var(--texto-suave); }
+.ver-mas { margin-top: 2rem; }
+
+/* Cómo trabajamos (es una secuencia real, por eso va numerada) */
+.pasos { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; counter-reset: paso; }
+.pasos li { counter-increment: paso; background: var(--fondo); border: 2px solid var(--oscuro); box-shadow: 5px 5px 0 var(--oscuro); border-radius: 4px; padding: 1.4rem; }
+.pasos li::before { content: counter(paso); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--mostaza); border: 2px solid var(--oscuro); font: 800 1.1rem var(--fuente-titulos); margin-bottom: .8rem; }
+.pasos h3 { font-size: 1.35rem; margin-bottom: .3rem; }
+.pasos p { color: var(--texto-suave); font-size: .95rem; }
+
+/* Artistas */
+.equipo { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+.tatuador .foto { aspect-ratio: 4 / 5; background: var(--oscuro); color: var(--mostaza); display: grid; place-items: center; font-family: var(--fuente-titulos); font-weight: 800; font-size: 5.5rem; margin-bottom: .9rem; overflow: hidden; border: 2px solid var(--oscuro); box-shadow: 5px 5px 0 var(--acento); border-radius: 4px; }
+.tatuador .foto img { width: 100%; height: 100%; object-fit: cover; }
+.tatuador h3 { font-size: 1.4rem; }
+.tatuador p { color: var(--texto-suave); font-size: .95rem; }
+
+/* Trabajos */
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.1rem; }
+.galeria .item { aspect-ratio: 1; background: var(--oscuro-2); overflow: hidden; display: grid; place-items: center; color: rgba(236,230,216,.55); font-size: .9rem; border: 2px solid var(--oscuro); box-shadow: 4px 4px 0 var(--oscuro); border-radius: 4px; }
+.galeria .item:nth-child(3n+2) { background: var(--acento-osc); color: rgba(255,255,255,.7); }
+.galeria .item:nth-child(3n) { background: #3a2a24; }
+.galeria img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Opiniones */
+.opiniones { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.opinion { background: var(--fondo); border: 2px solid var(--oscuro); box-shadow: 5px 5px 0 var(--acento); border-radius: 4px; padding: 1.4rem; }
+.opinion p { margin-bottom: .7rem; }
+.opinion cite { font-style: normal; font-weight: 700; font-size: .92rem; }
+
+/* Contacto */
+.contacto { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+.horario { width: 100%; border-collapse: collapse; }
+.horario td { padding: .7rem 0; border-bottom: 1px solid rgba(15,27,34,.25); }
+.horario td:last-child { text-align: right; font-weight: 600; }
+.datos p { margin-bottom: .8rem; }
+.redes { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+.redes a { font-weight: 700; }
+
+/* Pedir cita */
+form.reserva { display: grid; gap: 1rem; max-width: 560px; }
+form.reserva label { display: grid; gap: .3rem; font-weight: 600; font-size: .95rem; }
+form.reserva input, form.reserva select, form.reserva textarea { font: inherit; padding: .75rem; border-radius: 4px; border: 2px solid var(--oscuro); background: #f7f3ea; color: var(--texto); }
+form.reserva input:focus, form.reserva select:focus, form.reserva textarea:focus { outline: 3px solid var(--mostaza); outline-offset: 1px; }
+form.reserva .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+form.reserva label.check { display: flex; align-items: center; gap: .6rem; font-weight: 500; }
+form.reserva label.check input { width: 1.2rem; height: 1.2rem; accent-color: var(--acento-osc); }
+form.reserva .boton { justify-self: start; }
+
+footer { background: var(--oscuro); color: rgba(236,230,216,.7); padding: 2rem 0; font-size: .9rem; text-align: center; border-top: 3px solid var(--acento); }
+
+@media (max-width: 820px) {
+  section { padding: 3.5rem 0; }
+  .hero { padding: 3rem 0 3.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .insignia { width: min(280px, 80%); }
+  form.reserva .fila { grid-template-columns: 1fr; }
+}

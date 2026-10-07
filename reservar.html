@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tatuajes personalizados, cover-ups y piercing. Pide tu cita.">
+<title>Tatuajes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-titulo="Reservar">
+<div id="cabecera"></div>
+<main>
+<div class="cabecera-pagina"><div class="wrap">
+  <h1>Pide tu cita</h1>
+  <p>Cuéntanos tu idea y te respondemos por WhatsApp con presupuesto y fecha.</p>
+</div></div>
+<section><div class="wrap">
+  <form class="reserva" id="form-reserva">
+    <label>Nombre <input name="nombre" required autocomplete="name"></label>
+    <label>Qué quieres hacerte <select name="servicio" id="sel-servicio"></select></label>
+    <div class="fila">
+      <label>Zona del cuerpo <input name="zona" placeholder="ej. antebrazo" required></label>
+      <label>Tamaño aprox. <input name="tamano" placeholder="ej. 10 cm"></label>
+    </div>
+    <label>Tu idea <textarea name="idea" rows="3" placeholder="Cuéntanos el estilo, referencias, si es un cover-up..."></textarea></label>
+    <label>Día preferido <input type="date" name="dia"></label>
+    <label class="check"><input type="checkbox" name="mayor" required> Soy mayor de 18 años</label>
+    <button class="boton" type="submit">Enviar por WhatsApp</button>
+  </form>
+</div></section>
+</main>
+<div id="pie"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
