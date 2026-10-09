@@ -31,6 +31,13 @@ if (eq) eq.innerHTML = CONFIG.equipo.map(p => `
   <div class="tatuador"><div class="foto">${p.foto ? `<img src="${esc(p.foto)}" alt="${esc(p.nombre)}">` : esc(p.nombre.charAt(0))}</div>
   <h3>${esc(p.nombre)}</h3><p>${esc(p.cargo)}</p></div>`).join('');
 
+/* Portada: 4 primeras fotos de CONFIG.galeria; al hacer clic llevan a Trabajos */
+const hg = $('#hero-galeria');
+if (hg) hg.innerHTML = [0, 1, 2, 3].map(i => {
+  const f = CONFIG.galeria[i];
+  return `<a href="galeria.html" aria-label="Ver todos los trabajos">${f ? `<img src="${esc(f)}" alt="Tatuaje ${i + 1}">` : ''}</a>`;
+}).join('');
+
 const ga = $('#galeria-lista');
 if (ga) ga.innerHTML = (CONFIG.galeria.length ? CONFIG.galeria : Array(6).fill(null))
   .map((f, i) => `<div class="item">${f ? `<img src="${esc(f)}" alt="Trabajo ${i + 1}" loading="lazy">` : 'Foto ' + (i + 1)}</div>`).join('');
