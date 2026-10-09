@@ -48,7 +48,11 @@ const CONFIG = {
     { nombre: "Nombre Apellido", cargo: "Piercing",                          foto: "" }
   ],
 
-  galeria: [   // ej.: "trabajo1.jpg". Si está vacío se muestran recuadros de ejemplo.
+  galeria: [   //Si está vacío se muestran recuadros de ejemplo.
+    "img/trabajo1.png",
+    "img/trabajo2.png",
+    "img/trabajo3.png",
+    "img/trabajo4.png"
   ],
 
   opiniones: [
