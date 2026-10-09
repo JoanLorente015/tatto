@@ -56,14 +56,14 @@ nav a.boton { padding: .45rem .95rem; opacity: 1; border-bottom: 2px solid var(-
 .hero { background: var(--oscuro); color: var(--fondo); padding: 4.5rem 0 5rem; border-bottom: 3px solid var(--acento); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
 .hero h1 { font-size: clamp(3rem, 9vw, 6rem); max-width: 10ch; margin-bottom: 1.2rem; }
-.hero p { font-size: 1.15rem; max-width: 46ch; opacity: .85; margin-bottom: 2rem; }
+.hero p { font-size: 1.15rem; max-width: 46ch; opacity: .85; }
 .acciones { display: flex; flex-wrap: wrap; gap: 1rem; }
-.insignia { width: min(380px, 100%); margin: auto; }
-.insignia svg { width: 100%; height: auto; }
-@media (prefers-reduced-motion: no-preference) {
-  .insignia svg { animation: balanceo 6s ease-in-out infinite; transform-origin: center; }
-  @keyframes balanceo { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
-}
+/* Galería de la portada (cada foto enlaza a Trabajos) */
+.hero-galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; width: min(440px, 100%); margin: 0 auto 1.8rem; }
+.hero-galeria a { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--oscuro-2); border: 2px solid var(--fondo); border-radius: 4px; box-shadow: 5px 5px 0 var(--acento); transition: transform .2s, box-shadow .2s; }
+.hero-galeria a:nth-child(even) { translate: 0 1.8rem; }
+.hero-galeria a:hover, .hero-galeria a:focus-visible { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--mostaza); }
+.hero-galeria img { width: 100%; height: 100%; object-fit: cover; }
 .banda-reserva { background: var(--oscuro); color: var(--fondo); text-align: center; border-top: 3px solid var(--acento); }
 .banda-reserva p { opacity: .8; margin: .5rem 0 1.6rem; }
 
@@ -127,6 +127,6 @@ footer { background: var(--oscuro); color: rgba(236,230,216,.7); padding: 2rem 0
   section { padding: 3.5rem 0; }
   .hero { padding: 3rem 0 3.5rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .insignia { width: min(280px, 80%); }
+  .hero-galeria { width: min(340px, 100%); }
   form.reserva .fila { grid-template-columns: 1fr; }
 }
