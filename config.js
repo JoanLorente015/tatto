@@ -55,9 +55,9 @@ const CONFIG = {
   ],
 
   opiniones: [
-    { texto: "Salió exactamente como lo imaginaba, incluso mejor.",             autor: "Cliente 1" },
-    { texto: "Higiene impecable y un trato muy cercano. Repetiré.",             autor: "Cliente 2" },
-    { texto: "Me taparon un tatuaje de hace años y quedó irreconocible. Genial.", autor: "Cliente 3" }
+    { texto: "Un sitio de 10. Muy profesionales, el estudio está impecable y el trato es excelente; te hacen sentir muy cómodo y te explican todo con detalle. Me hice dos piercings y el resultado quedó genial. Sin duda, un lugar totalmente recomendable.💗",             autor: "Lucia López" },
+    { texto: "Increíble lugar para ir a tatuarse o hacerse algunos de sus servicios de piercing y gemz. Los dueños del local son personas muy agradables y con muy alto criterio de lo que hacen además muy profesionales,  el local está increíblemente decorado con una estética retro increíble. Sin duda muy recomendado 🤜🏼💥🤛🏼",             autor: "Fernando de armas" },
+    { texto: "100% recomendable ! desde que hablé con ellos vi que estábamos en sintonía . Paul me ha hechos dos tattoos brutales y de pasó Camille ha decorado mi sonrisa. Gracias chicos, sois totales ! por cierto … el local es lo mas ! sin duda nos veremos pronto !", autor: "Aurora Moreno" }
   ],
 
   horario: [
